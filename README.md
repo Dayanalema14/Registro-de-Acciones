@@ -39,29 +39,38 @@ Stock Tracker es una aplicación para gestionar un portafolio de inversiones. Pe
 
 ```
 📂 Registro de acciones
-├── 📁backend
-│   ├── 📁database
-│   ├── stocks.db
-│   ├── 📁node_modules
-│   ├── 📁src
-│   │   ├── 📁controllers
-│   │   │   └──StockController.js
-│   │   ├── 📁database
-│   │   │   └──database.js
-│   │   │   └──initDatabase.js
-│   │   ├── 📁models
-│   │   │   └──Stock.js
-│   │   ├── 📁routes
-│   │   │   └──stockRoutes.js
-│   │   ├── server.js
-│   ├── .env
-│   ├── package.json
-│   ├── package-lock.json
-├── 📁frontend
-│   ├── 📁public
-│   │   └──app.js
-│   │   └──index.html
-│   │   └──style.css
+├── 📁Docs
+│    ├── 📁Documentacion
+│    │    ├── Diagrama de actividades.png
+│    │    ├── Diagrama de casos de uso.png
+│    │    ├── Diagrama de Robustez.png
+│    │    ├── Diseño del Producto.pdf
+│    │    ├── Flujo de trabajo.md
+│    │    └── Requisistos.d
+├───📁Codigo
+│    ├── 📁backend
+│    │    ├── 📁database
+│    │    ├── stocks.db
+│    │    ├── 📁node_modules
+│    │    ├── 📁src
+│    │    │   ├── 📁controllers
+│    │    │   │    └──StockController.js
+│    │    │   ├── 📁database
+│    │    │   │    └──database.js
+│    │    │   │    └──initDatabase.js
+│    │    │   ├── 📁models
+│    │    │   │    └──Stock.js
+│    │    │   ├── 📁routes
+│    │    │   │    └──stockRoutes.js
+│    │    │   └── server.js
+│    │    ├── .env
+│    │    ├── package.json
+│    │    └── package-lock.json
+│    └── 📁frontend
+│         └── 📁public
+│             ├───app.js
+│             ├───index.html
+│             └──style.css
 └── README.md
 ```
 
