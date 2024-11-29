@@ -1,4 +1,4 @@
-Flujo de Trabajo para el Desarrollo de la Aplicación de Gestión de
+# Flujo de Trabajo para el Desarrollo de la Aplicación de Gestión de
 Acciones
 
 Objetivo:
@@ -9,7 +9,7 @@ del producto.
 
 Fases del desarrollo
 
-1.  Planificación
+## 1.  Planificación
 
 Objetivos:
 
@@ -21,7 +21,7 @@ Objetivos:
 
 Entregables: Documento de Diseño del Producto.
 
-2.  Diseño
+## 2.  Diseño
 
 Objetivos:
 
@@ -33,7 +33,7 @@ Objetivos:
 
 Entregables: Diagramas de arquitectura
 
-3.  Configuración del Entorno
+## 3.  Configuración del Entorno
 
 Requisitos del Sistema
 
@@ -109,7 +109,7 @@ El repositorio se organiza en las siguientes ramas principales:
 ![image](https://github.com/user-attachments/assets/c6767558-9dd9-41fb-9d93-f2660feb8468)
 
 
-4.  Desarrollo
+## 4.  Desarrollo
 
 Base de Datos: Diseño y configuración de tabla en SQLite.
 
@@ -119,7 +119,7 @@ gestionar la lógica de negocio y exponer la API.
 Front-End: Creación de vistas y componentes interactivos utilizando
 HTML, CSS, y JavaScript.
 
-5.  Revisión de Código
+## 5.  Revisión de Código
 
 Objetivos:
 
@@ -130,7 +130,7 @@ Objetivos:
 
 Entregables: Informe de pruebas.
 
-6.  Mantenimiento
+##  6.  Mantenimiento
 
 Objetivos:
 
