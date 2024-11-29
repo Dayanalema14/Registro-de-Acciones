@@ -1,5 +1,5 @@
 # Flujo de Trabajo para el Desarrollo de la Aplicación de Gestión de
-Acciones
+## Acciones
 
 Objetivo:
 
