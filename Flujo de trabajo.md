@@ -1,4 +1,4 @@
-#Flujo de Trabajo para el Desarrollo de la Aplicación de Gestión de
+Flujo de Trabajo para el Desarrollo de la Aplicación de Gestión de
 Acciones
 
 Objetivo:
