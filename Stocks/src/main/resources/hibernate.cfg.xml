@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Driver de conexión a MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- URL de conexión a la base de datos -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/stocks_db?useSSL=false&amp;serverTimezone=UTC</property>
+
+        <!-- Credenciales de la base de datos -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Dialecto de MySQL para Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+
+        <!-- Mostrar las consultas SQL en la consola -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Formatear las consultas SQL para mejor lectura -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Actualización automática del esquema de la base de datos -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapeo de entidades -->
+        <mapping class="ec.epn.edu.ec.stocks.model.Stock"/>
+    </session-factory>
+</hibernate-configuration>
