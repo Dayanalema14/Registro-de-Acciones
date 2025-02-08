@@ -49,21 +49,36 @@ Stock Tracker es una aplicación para gestionar un portafolio de inversiones. Pe
 ```
 📂 Registro de acciones
 ├───📁Stocks
-│    ├── 📁src
-│    │    ├── 📁main
-│    │    │    ├── 📁java
-│    │    │    ├── 📁resources
-│    │    │    │    └──hibernate.cfg.xml
-│    │    │    └── 📁webapp
-│    │    │         ├── 📁WEB-INF
-│    ├── 📁target
-│    │    ├── 📁META-INF
-│    │    │    └── context.xml
-│    │    └── 📁WEB-INF
-│    │         ├── web.xml
-│    │         └── lib/
-├── README.md
-└── LICENSE
+│    └── 📁src
+│         └── 📁main
+│              ├── 📁java
+│              │    └── 📁ec\epn\edu\ec\stocks
+│              │         ├── 📁api
+│              │         │    └──StockPriceFetcher.java
+│              │         ├── 📁config
+│              │         │    └──HibernateConfig.java
+│              │         ├── 📁controller
+│              │         │    ├──ExportCSVController.java
+│              │         │    ├──GraficoController.java
+│              │         │    └──StrockController.java
+│              │         ├── 📁dao
+│              │         │    ├──BaseDAO.java
+│              │         │    └──StockDAO.java
+│              │         ├── 📁model
+│              │         │    └──Stock.java
+│              │         └── 📁setvice
+│              │              └──StockService.java
+│              ├── 📁resources
+│              │    └──hibernate.cfg.xml
+│              └── 📁webapp
+│                   ├── 📁js
+│                   │     └── grafico.js
+│                   ├── consolidation.js
+│                   ├── grafico.jsp
+│                   ├── home.jsp
+│                   └── index.html
+└── README.md
+
 ```
 
 ---
@@ -87,9 +102,9 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 4. **Configurar la base de datos**:
    Crea una base de datos en MySQL con el siguiente esquema:
    ```sql
-   CREATE DATABASE stock_tracker;
+   CREATE DATABASE stocks_db;
    ```
-   Luego, importa las tablas de la base de datos desde el archivo `StockTrackerDB.sql` ubicado en `📂backend/database/`.
+
 
 5. **Configurar la API de Finnhub**:
    Asegúrate de que la URL y la clave API estén correctamente configuradas en el archivo de propiedades de la aplicación.
