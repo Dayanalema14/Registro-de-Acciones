@@ -1,0 +1,247 @@
+/* Estilo general del menú */
+nav {
+    margin: 27px auto 0;
+    position: relative;
+    width: 350px; /* Ajusta según el número de elementos y su ancho */
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 0; /* Evita espacio en línea entre elementos */
+}
+
+/* Estilo de los enlaces */
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #435f7a;
+    cursor: pointer;
+}
+
+/* Animación */
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all 0.5s ease 0s;
+    border-radius: 8px;
+}
+
+/* Ancho de cada elemento (ajusta según tus necesidades) */
+a:nth-child(1) {
+    width: 100px; /* Ancho del enlace "Inicio" */
+}
+a:nth-child(2) {
+    width: 130px; /* Ancho del enlace "Consolidado" */
+}
+a:nth-child(3) {
+    width: 120px; /* Ancho del enlace "Gráfico" */
+}
+
+/* Animación al pasar el mouse por cada elemento */
+nav .start-home,
+a:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+}
+nav .start-about,
+a:nth-child(2):hover ~ .animation {
+    width: 130px;
+    left: 100px;
+    background-color: #19b850;
+}
+nav .start-blog,
+a:nth-child(3):hover ~ .animation {
+    width: 120px;
+    left: 230px;
+    background-color: #3498db;
+}
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.42);
+}
+
+/* Headings */
+h4 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Profit/Loss Coloring */
+.text-success {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Utility Classes */
+.d-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.mt-5 {
+    margin-top: 30px;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+

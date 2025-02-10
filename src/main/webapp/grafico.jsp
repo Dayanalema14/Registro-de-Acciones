@@ -9,32 +9,14 @@
   <title>Acciones Archivadas</title>
   <!-- Incluir Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      padding-top: 70px; /* Ajusta según la altura de la barra de navegación */
-    }
-    .chart-container {
-      width: 100%;
-      height: 400px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
-    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-      <li class="nav-item">
-        <a class="nav-link mx-2" href="stockController?route=listStocks">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link mx-2" href="stockController?route=consolidateStock">Consolidado</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link mx-2" href="stockController?route=grafico">Gráfico</a>
-      </li>
-    </ul>
-    <a class="navbar-brand ms-auto" href="#">Stock Manager</a>
-  </div>
+<nav>
+  <a href="stockController?route=listStocks">Inicio</a>
+  <a href="stockController?route=consolidateStock">Consolidado</a>
+  <a href="stockController?route=grafico">Gráfico</a>
+  <div class="animation start-home"></div>
 </nav>
 <div class="container mt-4">
   <h4 class="text-center">Gráfico de Acciones</h4>

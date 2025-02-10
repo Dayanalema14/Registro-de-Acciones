@@ -7,28 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <style>
-        body {
-            padding-top: 70px; /* Adjust based on navbar height */
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-                <a class="nav-link mx-2" href="stockController?route=listStocks">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mx-2" href="stockController?route=consolidateStock">Consolidado</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mx-2" href="stockController?route=grafico">Grafico</a>
-            </li>
-        </ul>
-        <a class="navbar-brand ms-auto" href="#">Stock Manager</a>
-    </div>
+<nav>
+    <a href="stockController?route=listStocks">Inicio</a>
+    <a href="stockController?route=consolidateStock">Consolidado</a>
+    <a href="stockController?route=grafico">Gráfico</a>
+    <div class="animation start-home"></div>
 </nav>
 <div class="container">
     <h4 class="mt-2">Registro de Acciones</h4>
