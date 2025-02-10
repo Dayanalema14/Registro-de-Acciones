@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -87,6 +88,21 @@ public class StockController extends HttpServlet {
 
         List<Stock> stocks = stockService.getAllStocks();
         stockService.updateProfitOrLoss(stocks);
+
+        String sortBy = request.getParameter("sortBy");
+        if ("name".equals(sortBy)) {
+            stocks = stocks.stream()
+                    .sorted(Comparator.comparing(Stock::getCompanyName))
+                    .collect(Collectors.toList());
+        } else if ("profitAsc".equals(sortBy)) {
+            stocks = stocks.stream()
+                    .sorted(Comparator.comparing(Stock::getProfitOrLoss))
+                    .collect(Collectors.toList());
+        } else if ("profitDesc".equals(sortBy)) {
+            stocks = stocks.stream()
+                    .sorted(Comparator.comparing(Stock::getProfitOrLoss).reversed())
+                    .collect(Collectors.toList());
+        }
 
         request.setAttribute("stocks", stocks);
         request.getRequestDispatcher("/home.jsp").forward(request, response);

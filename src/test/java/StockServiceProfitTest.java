@@ -4,6 +4,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -76,5 +80,61 @@ public class StockServiceProfitTest {
 
         assertEquals(-33.33, Math.round(profitPercentage * 100.0) / 100.0,
                 "Profit percentage should reflect loss for a lower current price.");
+    }
+
+    @Test
+    public void testSortByName() {
+        List<Stock> stocks = Arrays.asList(
+                new Stock("Apple Inc", "AAPL", LocalDate.now(), 10, 150.0),
+                new Stock("Microsoft", "MSFT", LocalDate.now(), 20, 200.0),
+                new Stock("Amazon Inc", "AMZN", LocalDate.now(), 40, 100.0)
+        );
+        stocks = stocks.stream()
+                .sorted(Comparator.comparing(Stock::getCompanyName))
+                .collect(Collectors.toList());
+
+        assertEquals("Amazon Inc", stocks.get(0).getCompanyName());
+        assertEquals("Apple Inc", stocks.get(1).getCompanyName());
+        assertEquals("Microsoft", stocks.get(2).getCompanyName());
+    }
+
+    @Test
+    public void testSortByProfitAsc() {
+        List<Stock> stocks = Arrays.asList(
+                new Stock("Apple Inc", "AAPL", LocalDate.now(), 10, 150.0),
+                new Stock("Microsoft", "MSFT", LocalDate.now(), 20, 200.0),
+                new Stock("Amazon Inc", "AMZN", LocalDate.now(), 40, 100.0)
+        );
+        stocks.get(0).setProfitOrLoss(500.0);
+        stocks.get(1).setProfitOrLoss(1000.0);
+        stocks.get(2).setProfitOrLoss(200.0);
+
+        stocks = stocks.stream()
+                .sorted(Comparator.comparing(Stock::getProfitOrLoss))
+                .collect(Collectors.toList());
+
+        assertEquals("Amazon Inc", stocks.get(0).getCompanyName());
+        assertEquals("Apple Inc", stocks.get(1).getCompanyName());
+        assertEquals("Microsoft", stocks.get(2).getCompanyName());
+    }
+
+    @Test
+    public void testSortByProfitDesc() {
+        List<Stock> stocks = Arrays.asList(
+                new Stock("Apple Inc", "AAPL", LocalDate.now(), 10, 150.0),
+                new Stock("Microsoft", "MSFT", LocalDate.now(), 20, 200.0),
+                new Stock("Amazon Inc", "AMZN", LocalDate.now(), 40, 100.0)
+        );
+        stocks.get(0).setProfitOrLoss(500.0);
+        stocks.get(1).setProfitOrLoss(1000.0);
+        stocks.get(2).setProfitOrLoss(200.0);
+
+        stocks = stocks.stream()
+                .sorted(Comparator.comparing(Stock::getProfitOrLoss).reversed())
+                .collect(Collectors.toList());
+
+        assertEquals("Microsoft", stocks.get(0).getCompanyName());
+        assertEquals("Apple Inc", stocks.get(1).getCompanyName());
+        assertEquals("Amazon Inc", stocks.get(2).getCompanyName());
     }
 }

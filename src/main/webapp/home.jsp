@@ -65,6 +65,18 @@
                 <button type="submit" class="btn btn-success mt-3">Exportar CSV</button>
             </form>
         </div>
+        <form action="stockController" method="get" class="mb-3">
+            <input type="hidden" name="route" value="listStocks">
+            <div class="form-group">
+                <label for="sortBy">Ordenar por:</label>
+                <select name="sortBy" id="sortBy" class="form-control" onchange="this.form.submit()">
+                    <option value="">Selecciona un criterio</option>
+                    <option value="name" ${param.sortBy == 'name' ? 'selected' : ''}>Nombre de la Acción</option>
+                    <option value="profitAsc" ${param.sortBy == 'profitAsc' ? 'selected' : ''}>Ganancia/Pérdida (Ascendente)</option>
+                    <option value="profitDesc" ${param.sortBy == 'profitDesc' ? 'selected' : ''}>Ganancia/Pérdida (Descendente)</option>
+                </select>
+            </div>
+        </form>
         <table class="table table-bordered mt-3">
             <thead>
             <tr>
