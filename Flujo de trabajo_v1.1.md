@@ -5,7 +5,7 @@
 - **codigo:** Rama de desarrollo para el código antes de ser enviado a producción.
 - **documentacion:** Rama dedicada exclusivamente a la documentación.
 
-!workflow.png
+![workflow]
 
 #### 2. Flujo de Trabajo
 
